@@ -1,0 +1,7 @@
+## README for running scripts ##
+
+1. Build the Java ZooKeeper program
+   ./build.sh
+
+2. Launch the ZooKeeper test
+   ./run-benchmark.sh [begin] [end] [incr] [mode] [#clients]

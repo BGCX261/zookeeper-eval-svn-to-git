@@ -1,0 +1,24 @@
+## README for Initialization Scripts ##
+
+Simple Usage
+1. Initialize client node:
+   1key-cli.sh [mode] [cli_id]
+
+2. Initialize server node:
+   1key-server.sh [mode] [server_id]   
+
+Backup Usage
+1. Create a partition on /dev/[diskdir] 
+   ./ctPartition.sh [diskdir]
+   (e.g. ./ctPartition.sh sdc)
+
+2. Create and mount the file system
+   ./createFS.sh [mode] [dataloc] [myid] [diskdir]
+   (e.g. ./createFS.sh standalone shared 1 sdc1)
+
+3. Create File System with separate log and data disks
+   ./createFS.sh [mode] [dataloc] [myid] [datadisk] [logdisk]
+
+4. Initialize the server
+   ./initServer.sh [mode] [dataloc] [procs] [sleeptm]
+   (e.g. ./initServer.sh standalone local 1 0)
